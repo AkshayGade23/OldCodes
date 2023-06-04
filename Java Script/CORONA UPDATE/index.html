@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corona Live Update</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center; font-size: 5rem;">Corona Live Update</h1>
+    </header>
+    <div class="input-container">
+      <input
+        type="text"
+        class="input-text"
+        placeholder="Country Name"
+        value="India"
+      />
+      <button class="ready-to-go">Go</button>
+    </div>
+
+    <div class="corona-container">
+      <div class="total-case">
+        Confirmed
+        <span id="total-number"></span>
+      </div>
+      <div class="recovered">
+        Recovered
+        <span id="recovered-number"></span>
+      </div>
+      <div class="deaths">
+        Deceased
+        <span id="death-number"></span>
+      </div>
+    </div>
+
+    <a href="https://www.worldometers.info/" target="blank"
+      ><p class="powered-by">~ By worldometer</p></a
+    >
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

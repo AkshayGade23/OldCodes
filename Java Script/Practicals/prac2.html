@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Display table</title>
+    <style>
+      h1 {
+          border-radius: 20rem;
+          width: 70%;
+        padding: 10px;
+        margin: auto;
+        /* margin-top: 5rem; */
+        background-color: rgb(228, 153, 212);
+      }
+      .but {
+        background-color: rgb(30, 192, 221);
+        border: 10px;
+        border-radius: 10px;
+        padding: 15px;
+        cursor: pointer;
+      }
+      .but:hover {
+        background-color: rgb(151, 251, 0);
+      }
+      input {
+        border: 5px solid rgb(174, 88, 255);
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        font-size: 15px;
+      }
+      .bor {
+        border: 5px solid lightgreen;
+        padding: 10px;
+        margin-left: 45%;
+        margin-right: 45%;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function printTable() {
+        var num;
+        num = Number(document.getElementById("txtNumber").value);
+        for (var i = 1; i <= 10; i++) {
+          var tablet = (document.getElementById("tabprint").innerHTML +=
+            num * i + "<br/>");
+        }
+      }
+
+      function printtable1() {
+        var num1;
+        num1 = Number(document.getElementById("txtNumber1").value);
+        var i = 1;
+        while (i <= 10) {
+          var tablet = (document.getElementById("tabprint1").innerHTML +=
+            num1 * i + "<br/>");
+          i++;
+        }
+      }
+
+      function printtable2() {
+        var num2;
+        num2 = Number(document.getElementById("txtNumber2").value);
+        var i = 1;
+        do {
+          var tablet = (document.getElementById("tabprint2").innerHTML +=
+            num2 * i + "<br/>");
+          i++;
+        } while (i <= 10);
+      }
+    </script>
+  </head>
+
+  <body style="text-align: center">
+    <h1>Enter a Number to Displaay Table (for loop)</h1>
+    <p><input type="text" id="txtNumber" placeholder="Enter number" /></p>
+    <p>
+      <input
+        type="button"
+        value="Print Table"
+        class="but"
+        onclick="printTable()"
+      />
+    </p>
+    <p id="tabprint" class="bor"></p>
+
+    <h1>Enter a Number to Displaay Table (while loop)</h1>
+    <p><input type="text" id="txtNumber1" placeholder="Enter number" /></p>
+    <p>
+      <input
+        type="button"
+        value="Print Table"
+        class="but"
+        onclick="printtable1()"
+      />
+    </p>
+    <p id="tabprint1" class="bor"></p>
+
+    <h1>Enter a Number to Displaay Table (do-while loop)</h1>
+    <p><input type="text" id="txtNumber2" placeholder="Enter number" /></p>
+    <p>
+      <input
+        type="button"
+        value="Print Table"
+        class="but"
+        onclick="printtable2()"
+      />
+    </p>
+    <p id="tabprint2" class="bor"></p>
+  </body>
+</html>

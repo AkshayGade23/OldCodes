@@ -1,0 +1,118 @@
+// 1906025 Akshay Gade
+// Experiment no. 13
+
+
+PROGRAM 13:
+
+// primitive type to class type 
+#include<iostream>
+using namespace std;
+
+class Complex{
+    int x;
+    public:
+    Complex(){}
+    Complex(int a){
+        x=a;
+    }
+
+    void getdata(){
+        cout<< "value of X= "<<x<<endl;
+    }
+};
+
+int main(){
+   int x=4;
+   Complex C;
+   C = x;
+   C.getdata();
+   return 0;
+}
+
+OUTPUT :
+value of X= 4
+
+
+// Class type to primitive type
+
+#include <iostream>
+using namespace std;
+
+class Complex
+{
+    int c = 4;
+
+public:
+    void getdata()
+    {
+        cout << "value of c= " << c << endl;
+    }
+    operator int()
+    {
+        return c;
+    }
+};
+
+int main()
+{
+    int x;
+    Complex C;
+    x = C;
+    C.getdata();
+    cout << "value of X= " << x << endl;
+    return 0;
+}
+
+OUTPUT :
+value of c= 4
+value of X= 4
+
+// Class type to class type
+
+#include <iostream>
+using namespace std;
+
+class Product
+{
+    int P = 4;
+
+public:
+    int getP()
+    {
+        return P;
+    }
+    void getdata()
+    {
+        cout << "value of P = " << P << endl;
+    }
+};
+class Item
+{
+    int I = 4;
+
+public:
+    Item() {}
+    Item(Product C)
+    {
+        I = C.getP();
+    }
+    void getdata()
+    {
+        cout << "value of I = " << I << endl;
+    }
+};
+
+int main()
+{
+    Item x;
+    Product C;
+    x = C;
+    C.getdata();
+    x.getdata();
+
+    return 0;
+}
+OUTPUT :
+
+value of P = 4
+value of I = 4

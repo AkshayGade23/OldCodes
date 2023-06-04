@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Enter The Age to check Eligibility for Vaccination:</p>
+    <input id="myInput" type="number" />
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        var Age = document.getElementById("myInput").value;
+        var t;
+
+        if (Age == 18) {
+          t = "Wait for few months For Vaccination !";
+        } else if (Age > 18) {
+          t = "Eligible For Vaccination !!";
+        } else {
+          t = "Not Eligible for Vaccination !!";
+        }
+        document.getElementById("demo").innerHTML = t;
+      }
+    </script>
+  </body>
+</html>

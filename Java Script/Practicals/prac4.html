@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { margin-left: 3em;}
+
+        h2,h3 { margin-bottom: 1em;}
+
+        button { margin-left: 6em;}
+    </style>
+</head>
+
+<body>
+    <h2>Calculating Volume of Cuboid</h2>
+    <h3>Length = <input type="number" id="length" placeholder="Enter Length" /></h3>
+    <h3>Breadth = <input type="number" id="breadth" placeholder="Enter Breadth" /></h3>
+    <h3>Height = <input type="number" id="height" placeholder="Enter Height" /></h3>
+    <button id="calculate-btn" onclick="calculate()">Calculate</button>
+    <h1 id="answer">Volume is = ?</h1>
+
+    <script>
+
+        function calculate() {
+            let length = document.getElementById("length").value;
+            let breadth = document.getElementById("breadth").value;
+            let height = document.getElementById("height").value;
+            let answer = Number(length * breadth * height);
+            document.getElementById("answer").textContent = "Volume  = " + answer + " sq unit";
+        }
+    </script>
+</body>
+
+</html>

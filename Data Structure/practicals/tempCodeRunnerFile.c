@@ -1,0 +1,1 @@
+printf(" student1 =Roll no.%d    Name= %s \n",student1->roll_no,student1->name);

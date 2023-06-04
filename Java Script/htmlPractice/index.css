@@ -1,0 +1,31 @@
+body {
+    background-color: lightblue;
+  }
+  
+  .Title {
+    color: navy;
+    text-align: center;
+    
+  }
+  .Table{
+      background-color: antiquewhite;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 200px;
+      /* padding-right: ; */
+  }
+  .Table table{
+    border: 1px solid black;
+    padding: 10px;
+  }
+  .Table table tr th{
+      font-weight: bold;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgb(12, 82, 82);
+      padding-left: 8px;
+      padding-right: 8px;
+  }
+  .Table table tr td{
+    padding-left: 8px;
+      padding-right: 8px;
+  }

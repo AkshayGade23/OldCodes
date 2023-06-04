@@ -1,0 +1,32 @@
+main product table (id name BRAND price )
+cart (id name quantity price)
+
+DECLARE 
+cass int;
+status int :=0 ;
+Quantity int ;
+pprice int ;
+tprice int;
+product_id int;
+
+BEGIN
+WHILE ( status = 0 
+LOOP
+ dbms_output.put_line('1 continue');
+ dbms_output.put_line('2 Exit');
+ cass := &cass ;
+
+CASE cass
+WHEN 1 THEN 
+   product_id := &product_id ;
+   Quantity := &Quantity ;
+   select price into pprice from products where id = product_id ;
+   tprice := Quantity * pprice ;
+   insert into cart values(product_id,(select name from Products where id = product_id),Quantity,tprice);
+
+WHEN 2 THEN status := 1; 
+END CASE;
+END LOOP;
+  
+END;
+/

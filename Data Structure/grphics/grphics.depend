@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1600592327 source:c:\c language programs\grphics\main.cpp
+	<stdio.h>
+	<graphics.h>
+

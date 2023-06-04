@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Events {
+            width: 200px;
+            height: 170px;
+            margin-left: 35em;
+            margin-top: 10em;
+            text-align: center;
+        }
+
+        p {
+            margin: 5px;
+            font-weight: bold;
+            font-size: 27px;
+        }
+
+        #event-1,#input-dtl,#submit {
+            margin-top: 10px;
+        }
+
+        #event-1 {
+            text-align: center;
+        }
+
+        #input-dtl {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Events">
+        <input id="red" type="checkbox" onclick="red()">Red</input>
+        <input id="green" type="checkbox" onclick="green()">Green</input>
+        <input id="blue" type="checkbox" onclick="purple()">Purple</input>
+        <p id="title">From Events</p>
+        <p id="input-dtl">Normal</p>
+        <input type="text" id="event-1" onfocus="onFocus()" onblur="onBlur()" />
+    </div>
+
+    <script>
+        function onFocus() {
+            document.getElementById("event-1").style.background = "aqua";
+            document.getElementById("input-dtl").textContent = " OnFocus ";
+        }
+
+        function onBlur() {
+            document.getElementById("event-1").style.background = "#99ff99";
+            document.getElementById("input-dtl").textContent = " OnBlur ";
+        }
+
+        function red() {
+            if (document.getElementById("red").checked == true) {
+                document.getElementById("green").checked = false;
+                document.getElementById("blue").checked = false;
+            }
+            document.getElementById("title").style.color = "Red";
+        }
+
+        function green() {
+            if (document.getElementById("green").checked == true) {
+                document.getElementById("red").checked = false;
+                document.getElementById("blue").checked = false;
+            }
+            document.getElementById("title").style.color = "Green";
+        }
+
+        function purple() {
+            if (document.getElementById("blue").checked == true) {
+                document.getElementById("red").checked = false;
+                document.getElementById("green").checked = false;
+            }
+            document.getElementById("title").style.color = "Purple";
+        }
+
+    </script>
+</body>
+</html>

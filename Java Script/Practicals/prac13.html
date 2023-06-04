@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    < <title>Angular js</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+        </script>
+        <style>
+            body{
+                background-color: rgb(202, 223, 200);
+            }
+            h1 ,h2{
+                padding: 5px;
+                background-color: aquamarine;
+                text-align: center;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                    sans-serif;
+            }
+
+            #an {
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+    <div ng-app="" id="an">
+        <br /><br />
+        <h2>Angular Js Practical</h2>
+        <br /><br />
+        <h4>INPUT:</h4>
+        <p>Enter Name : <input type="text" ng-model="name" /></p>
+        <br />
+        <h4>OUPUT:</h4>
+        <h1>Hello {{name}}. What's Up!</h1>
+    </div>
+</body>
+
+</html>

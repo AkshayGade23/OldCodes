@@ -1,0 +1,137 @@
+public class Fibonacci {
+    public static void main(String[] args) {
+       
+        long a = 0;
+        long b = 1;
+
+        System.out.println("Fibonacci Series upto 50 times");
+        System.out.println(a);
+        System.out.println(b);
+        for(int count = 3;count <= 50;count++) {
+            long temp = a;
+            a = b;
+            b = b + temp;
+            System.out.printf(" %d,",b);
+        }
+       
+    }
+}
+
+Fibonacci Series upto 50
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, 2971215073, 4807526976, 7778742049,
+
+
+public class EvenSeries {
+    public static void main(String[] args) {
+        int even = 0;
+        while (even < 20) {
+            even += 2;
+            System.out.println(even);
+        }
+    }
+}
+
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+public class SumofDigits {
+    public static void main(String[] args) {
+        int num = 555;
+        int sum = 0;
+        while (num > 0) {
+           int rem = num % 10;
+           sum = sum +rem;
+           num = num/10;
+        }
+        System.out.printf("Sum of Digit's in number is %d ",sum);
+    }
+}
+
+
+public class Prime {
+    public static void main(String[] args) {
+        int num = 17;
+        int c = 2;
+        boolean isPrime = true;
+
+        while (c * c < num) {
+            if (num % c == 0) {
+                isPrime = false;
+                break;
+            }
+            c++;
+        }
+
+        if (isPrime) {
+            System.out.println("Given number is prime");
+        } else {
+            System.out.println("Given number is not  prime");
+
+        }
+    }
+}
+
+public class NumberToWord {
+    public static void main(String[] args) {
+        int num = 3405;
+        System.out.println(num);
+        
+        int reverseNumber = 0;
+        while (num > 0) {
+            int rem = num % 10;
+            reverseNumber = reverseNumber * 10 + rem;
+            num /= 10;
+        }
+        num = reverseNumber ;
+
+        while (num > 0) {
+            int rem = num % 10;
+
+            if (rem == 0) {
+                num=num/10;
+                continue;
+            } else {
+                switch (rem) {
+                    case 1:
+                        System.out.print("One");
+                        break;
+                    case 2:
+                        System.out.print("Two");
+                        break;
+                    case 3:
+                        System.out.print("Three");
+                        break;
+                    case 4:
+                        System.out.print("Four");
+                        break;
+                    case 5:
+                        System.out.print("Five");
+                        break;
+                    case 6:
+                        System.out.print("Six");
+                        break;
+                    case 7:
+                        System.out.print("Seven");
+                        break;
+                    case 8:
+                        System.out.print("Eight");
+                        break;
+                    case 9:
+                        System.out.print("Nine");
+                }
+            }
+            System.out.print(" ");
+            num /= 10;
+        }
+    }
+}

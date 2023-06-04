@@ -1,0 +1,65 @@
+//multilevel inheritance
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student
+{
+    int id;
+public:
+    string name;
+
+    Student(int x, string s)
+    {
+        id = x;
+        name = s;
+    }
+     void Display()
+    {
+        cout << "ID = " << id << endl
+             << "Name = " << name << endl;
+
+    }
+
+};
+
+class test : public Student // derived Class 
+{
+public:
+    int t1, t2;
+
+    test(int x, string s, int m1, int m2) : Student(x, s)
+    {
+        t1 = m1;
+        t2 = m2;
+    }
+    void display()
+    {   
+        Display();
+        cout << "MArks of TEST1 = " << t1 << endl;
+        cout << "MArks of TEST2 = " << t2 << endl;
+    }
+};
+class Average : public test
+s{
+public:
+    int avg;
+
+    Average(int x, string s, int m1, int m2) : test(x, s,m1,m2){}
+
+    void AvgDisplay()
+    {
+        display();
+        cout<<"Average = "<< (t1+t2)/2;
+    }
+};
+
+int main()
+{
+   Average Obj(25,"Akshay",19,20);
+
+   Obj.AvgDisplay();
+}
+

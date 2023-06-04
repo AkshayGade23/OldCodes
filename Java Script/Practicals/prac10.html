@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Popup Windows</title>
+</head>
+<style>
+    h1 {
+        padding: 10px;
+        background-color: aquamarine;
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        color: rgb(228, 27, 27);
+        padding: 10px;
+    }
+
+    button {
+        margin-top: 20px;
+        color: cornflowerblue;
+        font-weight: bold;
+        color: teal;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <h1>Open new Window</h1>
+    <script>
+        function createPopWindow(pageURL, pageTitle, popupWinWidth, popupWinHeight) {
+            var left = screen.width;
+            var top = screen.height;
+            var Window = window.open(
+                pageURL,
+                pageTitle,
+                "resizable=yes,width=" +
+                popupWinWidth +
+                ",height=" +
+                popupWinHeight +
+                ",top=" +
+                top +
+                ",left=" +
+                left
+            );
+        }
+    </script>
+    <center>
+        <button onclick="createPopWindow('https://www.flipkart.com/','Watch video',1000,600)">
+            Click Here to Open Flipkart
+        </button>
+    </center>
+</body>
+
+</html>

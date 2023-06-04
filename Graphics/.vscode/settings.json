@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "2DROT.C": "cpp",
+        "2DSCAL.C": "cpp",
+        "2DTRANS.C": "cpp",
+        "3DROT.C": "cpp",
+        "3DTRANS.C": "cpp",
+        "BEZ.C": "cpp",
+        "2DREFL.C": "cpp",
+        "FLOOD.C": "cpp"
+    }
+}

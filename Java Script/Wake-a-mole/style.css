@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 456px;
+  height: 456px;
+  margin: auto;
+  background-color: #513B3C;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+body {
+  background-color: #C1EEFF;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #28231C;
+  cursor: pointer;
+}
+
+.mole {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS-D9J9jxgywecLiYxIHy0mQ45DwXtZPx7DpA&usqp=CAU");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.stop,
+.reload,
+#noob-btn,
+#pro-btn,
+#elite-btn {
+  padding: 0.5rem;
+  width: 6rem;
+  margin: 0.5rem 2rem;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.reload{
+  font-size: 20px;
+  color: rgb(136, 245, 12);
+}
+
+.stop{
+  font-size: 20px;
+  color: rgb(255, 62, 4);
+}
+.score-board {
+  margin: 0.7rem 2rem;
+  margin-bottom: 0;
+}
+
+.difficulty{
+  size: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}

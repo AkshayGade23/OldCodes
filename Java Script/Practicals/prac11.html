@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical 11</title>
+    <style>
+        h1 {
+            padding: 5px;
+            background-color: aquamarine;
+            text-align: center;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+        }
+    </style>
+</head>
+
+</style>
+<body>
+    <h1>Click On button</h1>
+
+    <center>
+        <button onclick="createPopWin()">
+            Let's GO!!
+        </button>
+    </center>
+    <script>
+        function createPopWin() {
+            let myWindow = window.open("", "", "width=400,height=400");
+            myWindow.document.write("<title> Child Window </title>");
+            myWindow.document.write("<p> Hii how are you??</p>");
+            myWindow.document.write("<button onclick='self.close()'>Close Window </button>")
+        }
+    </script>
+</body>
+
+</html>

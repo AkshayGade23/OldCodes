@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Creating Rollover</title>
+    <style>
+        h1 {
+            padding: 5px;
+            background-color: aquamarine;
+            text-align: center;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+        }
+        input, button {
+            height: 40px;
+            width: 200px;
+        }
+        body {
+            font-size: large;
+            background-color: #fde7f9;
+            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234, 249, 251, 0.63) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1> Create Simple Rollover </h1>
+        <br>
+        <input type="button" onmouseover="ChangeColor()" onmouseout="ChangeColor2()" value="Button" id="btn1" />
+    </center>
+    <br>
+    <center>
+        <h1> Create Image Rollover </h1>
+
+        <button
+            onmouseover="document.change.src='https://i.gadgets360cdn.com/large/spider_man_miles_morales_ending_1605186329120.jpg?downsize=950:*'"
+            onmouseout="document.change.src='https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/04/19/Pictures/_1d701ffe-62a7-11e9-b92f-deef78e36bd1.jpg'">Change
+            Img</button>
+        <br> <br>
+        <img src="https://i.gadgets360cdn.com/large/spider_man_miles_morales_ending_1605186329120.jpg?downsize=950:*'"
+            alt="" height="300px" width="450px" name="change">
+        <br><br>
+    </center>
+    <script language="javascript">
+        function ChangeColor() {
+            document.getElementById('btn1').style.backgroundColor = 'coral';
+
+        }
+        function ChangeColor2() {
+            document.getElementById('btn1').style.backgroundColor = 'White';
+
+        }
+    </script>
+</body>
+</html>

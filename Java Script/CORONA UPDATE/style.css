@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(to left, aqua, blue);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.corona-container {
+  border: 2px solid white;
+  width: 600px;
+  height: 400px;
+  border-radius: 3%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-left: 28%;
+  margin-top: 2rem;
+  display: flexbox;
+  font-size: 2rem;
+}
+
+.total-case,
+.deaths,
+.recovered {
+  margin: 3rem;
+  border: 1px solid red;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.total-case {
+  color: red;
+}
+
+.deaths {
+  color: black;
+}
+
+.recovered {
+  color: green;
+}
+
+#total-number {
+  margin-left: 8rem;
+}
+
+#death-number {
+  margin-left: 9rem;
+}
+
+#recovered-number {
+  margin-left: 7.9rem;
+}
+
+.input-container {
+  margin-top: 3rem;
+  margin-left: 42%;
+}
+
+.input-container input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 10rem;
+  border: none;
+}
+
+.input-container button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: white;
+  color: green;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.powered-by {
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+  color: blue;
+  margin-top: 0;
+  margin-right: 2rem;
+}
+
+a {
+  text-decoration: none;
+}

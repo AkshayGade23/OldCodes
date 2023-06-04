@@ -1,0 +1,74 @@
+create table Products (id int primary key,Product_Name varchar(20), Price int);
+
+create table customer (Cu_id int primary key,Customer_Name varchar(20), Tota_Price int);
+
+
+
+Declare 
+ status int := 0;
+ cas int;
+
+ 
+ 
+BEGIN
+
+ WHILE status == 0 ;
+ LOOP
+   dbms_output.put_line('1. Insert ');
+   dbms_output.put_line('2. Show ');
+   dbms_output.put_line('3. Exit ');
+ case cas
+ WHEN 1 THEN insert; 
+ WHEN 2 THEN ;
+ WHEN 3 THEN  status := 1;
+  End Case;     
+
+END LOOP;
+
+CREATE FUNCTION insert []
+RETURN VOID
+
+cas int ;
+name varchar(20);
+status := 0;
+p_id int;
+quantity int; 
+TPrice int;
+IS
+BEGIN
+
+dbms_output.put_line('Enter a Name ');
+name := &name;
+
+create table &name (no int,pd int,quantity int, price int );
+create sequence sq increment by 1 start with 1 minvalue 1 maxvalue 100 ;
+WHILE status == 0 ;
+ LOOP
+ dbms_output.put_line('1. Choose products ');
+   dbms_output.put_line('2. Exit ');
+
+ case cas
+ WHEN 1 THEN 
+   dbms_output.put_line('1. Choose products ');
+   p_id := &p_id ;
+
+   IF p_id > 0 and p_id < 0 THEN
+   dbms_output.put_line('Enter a quantity');
+   quantity := &quantity;
+    select price into TPrice from Products where id = p_id;
+    TPrice := TPrice * quantity ;
+ 
+   ELSE
+    dbms_output.put_line('Invalid PRoduct id ');
+    status := 1;
+
+    END IF ;
+ 
+  insert into  values(sq.nextval,p_id,TPrice);
+   
+ WHEN 2 THEN  status := 1;
+
+ END CASE:
+ END LOOP;
+ RETURN VOID;
+END insert;

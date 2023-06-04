@@ -1,0 +1,54 @@
+// 1906025 Akshay Gade
+// Experiment-12
+// Write a program to implement operator overriding (polymorphism).
+
+//  PROGRAM  12:
+
+#include <iostream>    // header file
+
+using namespace std;
+
+class A
+{
+
+public:
+    int numa = 10;
+    virtual A operator+(A a)  // operator overloading  
+    {
+        A temp;
+        temp.numa = this->numa + a.numa;
+        cout << "A class\n  Numa = " << temp.numa << endl;
+        return temp;
+    }
+};
+
+class B : public A       // class A inherited by class B
+{
+
+public:
+    int numb = 20;
+    A operator+(A a)     // operator overriding
+    {
+        B temp;
+        temp.numb = this->numb + a.numa;
+        cout << "B class\n  Numb = " << temp.numb << endl;
+        return temp;
+    }
+};
+
+int main()     // main function
+{
+    A *ptr_A; // Pointer of class A
+    A aaa;    // objects of class A
+    B bbb1;   // objects of class B
+
+    ptr_A = &bbb1; // class A's pointer pointing to class B's object
+    ptr_A->operator+(aaa);
+
+    return 0;
+}
+
+OUTPUT :
+
+         B class
+          Numb = 30

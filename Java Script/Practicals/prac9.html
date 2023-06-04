@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookies </title>
+  <style>
+    h1 {
+      background-color: aquamarine;
+      padding: 15px;
+    }
+
+    input {
+      width: 100%;
+      border: 2px solid #f0f0f0;
+      display: block;
+      font-size: 14px;
+      padding: 12px;
+      color: #222222;
+      text-align: center;
+      width: 500px;
+    }
+
+    button {
+      width: 200px;
+      height: 40px;
+      padding-left: 10px;
+      margin-right: 10%;
+      color: cornflowerblue;
+      font-weight: bold;
+    }
+  </style>
+
+<body>
+  <center>
+    <h1> Cookies Creation Updation Deletion </h1>
+    <input type="text" id="name" placeholder=" Username  ( for Cookiee)">
+    <br><br>
+    <button onclick="create((document.getElementById('name').value))">Create Cookies
+      <button onclick="update((document.getElementById('name').value))">Update Cookies
+        <button onclick="deleted()">Delete Cookies
+  </center>
+  <script>
+
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      alert(cname + " Cookiee with Value " + cvalue)
+    }
+
+    function create(name) {
+      if (name == "") {
+        alert("Blank Cookiee Creation Request Discarded");
+      } else {
+        document.getElementById("name").innerHTML = "";
+        setCookie('username', name, 1);
+      }
+    }
+
+    function update(name) {
+      setCookie('username', name, 1);
+      alert("Cookie Update")
+    }
+
+    function deleted() {
+      document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      alert("username Cookie deleted");
+    }
+
+  </script>
+</body>
+
+</html>
